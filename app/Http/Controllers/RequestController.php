@@ -21,7 +21,7 @@ class RequestController extends Controller
    public function store(Request $request)
 {
 
- // dd($request->input('days'));
+ //dd($request->input('days'));
     $activeDays = $request->input('active_days', []);
 
     // Strip days not in active list
@@ -36,7 +36,7 @@ class RequestController extends Controller
         'subjects'       => 'required|array|min:1',
         'subjects.*'     => 'exists:subjects,id',
         'days'           => 'required|array|min:3|max:6',
-        'days.*.day'     => 'required|in:sun,mon,tue,wed,thu,fri',
+        'days.*.day'     => 'required|in:sat,sun,mon,tue,wed,thu',
         'days.*.period'  => 'required|in:A,B,both',
         'notes'          => 'nullable|string|max:1000',
     ]);

@@ -20,7 +20,7 @@
     <div class="card shadow-sm">
         <div class="card-body p-0">
             <table class="table table-hover mb-0">
-                <thead class="table-dark">
+             <thead class="bg-body-secondary text-body" style="background-color: rgb(127, 127, 255);">
                     <tr>
                         <th>#</th>
                         <th>Name</th>

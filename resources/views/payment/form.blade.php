@@ -234,6 +234,31 @@
             margin-right: 6px;
         }
 
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 14px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--muted);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.1s;
+            margin-bottom: 1.25rem;
+        }
+
+        .back-btn:hover {
+                background: rgba(108,99,255,0.08);
+                border-color: rgba(108,99,255,0.3);
+                color: var(--accent);
+                transform: translateX(-2px);
+            }
+
         @keyframes spin { to { transform: rotate(360deg); } }
 
         @keyframes fadeUp {
@@ -268,8 +293,18 @@
         </div>
         @endif
 
+
+       <!-- Back Button -->
+        <a href="{{ route('school.index')}}"class="back-btn">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to Home
+        </a>
+
         {{-- Header --}}
         <div class="payment-header">
+
             <div class="header-icon">
                 <svg width="20" height="20" fill="none" stroke="#6c63ff" stroke-width="2" viewBox="0 0 24 24">
                     <rect x="1" y="4" width="22" height="16" rx="2"/>

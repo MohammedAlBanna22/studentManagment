@@ -168,12 +168,13 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
        @php
 $days = [
+    'sat' =>'Saturday',
     'sun' => 'Sunday',
     'mon' => 'Monday',
     'tue' => 'Tuesday',
     'wed' => 'Wednesday',
     'thu' => 'Thursday',
-    'fri' => 'Friday',
+
 ];
 
 $oldDays = collect(old('days', []))->keyBy('day');
