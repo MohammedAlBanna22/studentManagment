@@ -16,7 +16,7 @@ route::post('store','store')->name('subjects.store');
 // Update subject (handles the edit form submission)
   Route::put('update/{id}', 'update')->name('subject.update');
 //route::get('show/{id}','showByid');
-route::post('update/{id}','updateSubject')->name('subject.update');
+route::post('update/{id}','updateSubject')->name('subject.updateSubject');
 route::delete('delete/{id}','delete')->name('subject.delete');
 
 });
